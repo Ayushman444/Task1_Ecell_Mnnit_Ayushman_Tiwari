@@ -4,6 +4,10 @@ import { useState } from 'react';
 
 export const Main = () => {
 
+  const shadowStyle = {
+    boxShadow: 'inset 0px 0px 4px 2px rgba(0, 0, 0, 0.25)',
+  };
+
   const [clickedSquares, setClickedSquares] = useState(Array(9).fill(false));
   const [resetSquares, setSquares] = useState(false);
 
@@ -48,7 +52,7 @@ export const Main = () => {
     <div className="flex flex-col items-center  flex-wrap md:flex-row md:justify-center md:flex-wrap-reverse lg:flex-wrap lg:flex-row">
 
 
-        <div className="order-3 w-[250px] h-[250px] bg-gradient-to-br from-blue-500 to-pink-500 rounded-lg m-4 md:w-[691px] md:h-[337px] md:order-3 lg:w-[385px] lg:h-[385px] lg:order-1 ">
+        <div className="shadow-lg shadow-gray-400 order-3 w-[250px] h-[250px] bg-gradient-to-br from-blue-500 to-pink-500 rounded-lg m-4 md:w-[691px] md:h-[337px] md:order-3 lg:w-[385px] lg:h-[385px] lg:order-1 ">
         
 
         </div>
@@ -62,7 +66,9 @@ export const Main = () => {
         </div>
 
 
-        <div className="order-1 flex justify-center items-center w-[250px] h-[250px] bg-gray-200 rounded-lg m-4 md:w-[337px] md:h-[337px] md:order-2 lg:w-[385px] lg:h-[385px] z-10 lg:order-3 relative">
+        <div className="order-1 flex justify-center items-center w-[250px] h-[250px] bg-gray-200 rounded-lg m-4 md:w-[337px] md:h-[337px] md:order-2 lg:w-[385px] lg:h-[385px] z-10 lg:order-3 relative"
+        style={shadowStyle}
+        >
             <div className='grid grid-cols-3 grid-rows-3 bg-gray-200 w-4/5 h-4/5 z-20 absolute'>
                 {squares}
             </div>

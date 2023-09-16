@@ -17,9 +17,9 @@ export const Second = () => {
                     <div className='flex flex-col md:relative'>
                         <div className='absolute top-[-7rem] z-10 mx-auto'>
                             <img src="https://media.licdn.com/dms/image/D4D03AQEyyXGz1ZcKmw/profile-displayphoto-shrink_800_800/0/1684519031195?e=1700092800&v=beta&t=C3cms6_XzrKqwDXMgR13wMknU5BSKAFggnUNsDdUs8o"
-                                className='aspect-square rounded-full w-[140px] h-[140px] z-[25]' />
-                            <div className='w-[140px] h-[140px] bg-violet-500 rounded-full absolute
-             top-[-6px] z-[-10] left-[10px]'></div>
+                                className='hidden md:block md:aspect-square md:rounded-full md:w-[140px] md:h-[140px] md:z-[25]' />
+                            <div className='hidden md:block md:w-[140px] md:h-[140px] md:bg-violet-500 md:rounded-full md:absolute
+             md:top-[-6px] md:z-[-10] md:left-[10px]'></div>
                         </div>
 
                         <div className='text-center mt-7'>
