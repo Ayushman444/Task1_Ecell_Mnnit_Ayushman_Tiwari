@@ -5,7 +5,15 @@ import { FaTimes } from 'react-icons/fa';
 
 
 
-export const Navbar = () => {
+export const Navbar = ({onSelectComponent}) => {
+
+    const [selectedComponent, setSelectedComponent] = useState('main');
+
+    const handleButtonClick = (componentName) => {
+      setSelectedComponent(componentName);
+      onSelectComponent(componentName);
+    };
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -28,9 +36,12 @@ export const Navbar = () => {
               </div>
             )}
             <div className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'} md:space-x-4`}>
-              <button className='border-none m-2 font-bold'>Home</button>
-              <button className='border-none m-2 font-bold'>Grid</button>
-              <button className='border-none m-2 font-bold'>LinkedIn</button>
+              <button className='border-none m-2 font-bold' onClick={()=>handleButtonClick('second')}>Home</button>
+              <button className='border-none m-2 font-bold' onClick={()=>handleButtonClick('main')}>Grid</button>
+              <a href="https://www.linkedin.com/in/ayushman-tiwari-a7807b243/">
+              <button className='border-none m-2 font-bold' >LinkedIn</button>
+              </a>
+              
             </div>
           </div>
         </div>
